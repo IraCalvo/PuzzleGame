@@ -16,16 +16,21 @@ public class KeyNPC : MonoBehaviour
 
     IEnumerator talkedTo()
     {
-        if(PlayerController.keyCount != 3)
+        if(PlayerPrefs.HasKey("keyCount"))
         {
-            dialogLessThan3.SetActive(true);
-            PlayerController.instance.PlayerCannotMove();
-        }
-        if(PlayerController.keyCount == 3)
-        {
-            dialogWhenAllKeys.SetActive(true);
-            yield return new WaitForSeconds(2.5f);
-            SceneManager.LoadScene("Fin");
+            if(PlayerPrefs.GetInt("keyCount") == 3)
+            {
+                dialogWhenAllKeys.SetActive(true);
+                PlayerController.instance.PlayerCannotMove();
+                yield return new WaitForSeconds(2.5f);
+                SceneManager.LoadScene("Fin");
+            }
+
+            if(PlayerPrefs.GetInt("keyCount") != 3)
+            {
+                dialogLessThan3.SetActive(true);
+                PlayerController.instance.PlayerCannotMove();
+            }
         }
 
         yield return null;

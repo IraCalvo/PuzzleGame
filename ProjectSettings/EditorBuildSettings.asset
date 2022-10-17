@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BoulderLevel.unity
     guid: 4542b916a7c893047b606a6c31a20611
+  - enabled: 1
+    path: Assets/Scenes/Fin.unity
+    guid: b4b40384784b23c4d83ba2a546a6f3e5
   m_configObjects: {}

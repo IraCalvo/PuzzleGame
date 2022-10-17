@@ -23,13 +23,28 @@ public class PlayerController : MonoBehaviour
 
     public static PlayerController instance;
 
-    [SerializeField] public static int keyCount;
+    public static bool isNewGame =  true;
 
     void Awake()
     {
         instance = this;
         ui = FindObjectOfType<PlayerUI>();
         animator = GetComponent<Animator>();
+    }
+
+    void Start()
+    {
+        Debug.Log("isNewGame: " + isNewGame);
+        if(PlayerController.isNewGame == true)
+        {
+            PlayerController.isNewGame = false;
+            Debug.Log("PlayerController Start: reset keyCount.");
+            PlayerPrefs.SetInt("keyCount", 0);
+        }
+
+        PlayerPrefs.GetInt("keyCount");
+        Debug.Log("PlayerController Start: current amount of keys is:" + PlayerPrefs.GetInt("keyCount"));
+
     }
 
     void Update()
@@ -89,14 +104,16 @@ public class PlayerController : MonoBehaviour
                 animator.SetFloat("moveY", lastY);
                 animator.SetBool("isMoving", false);
             }
-            Debug.Log("Last X,Y:" + lastX + lastY);
+            // Debug.Log("Last X,Y:" + lastX + lastY);
         }
         
     }
 
     public void AddKey()
     {
-        keyCount++;
+        
+        PlayerPrefs.SetInt("keyCount", PlayerPrefs.GetInt("keyCount", 0) +1);
+        Debug.Log("PlayerController AddKey: current amount of keys is:" + PlayerPrefs.GetInt("keyCount"));
     }
 
     public void PlayerCannotMove()
