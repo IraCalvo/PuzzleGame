@@ -25,6 +25,10 @@ public class PlayerController : MonoBehaviour
 
     public static bool isNewGame =  true;
 
+    public GameObject mathExit;
+    public GameObject leverExit;
+    public GameObject boulderExit;
+
     void Awake()
     {
         instance = this;
@@ -45,6 +49,18 @@ public class PlayerController : MonoBehaviour
         PlayerPrefs.GetInt("keyCount");
         Debug.Log("PlayerController Start: current amount of keys is:" + PlayerPrefs.GetInt("keyCount"));
 
+        if(PlayerPrefs.GetString("lastCaveEntered") == "mathLevel")
+        {
+            this.transform.position = mathExit.transform.position;
+        }
+        if(PlayerPrefs.GetString("lastCaveEntered") == "leverLevel")
+        {
+            this.transform.position = leverExit.transform.position;
+        }
+        if(PlayerPrefs.GetString("lastCaveEntered") == "boulderLevel")
+        {
+            this.transform.position = boulderExit.transform.position;
+        }
     }
 
     void Update()
@@ -69,6 +85,18 @@ public class PlayerController : MonoBehaviour
 
                 if(Input.GetKeyDown(interactKey))
                     interactable.Interact();
+                    if(interactable.tag == "mathLevel")
+                    {
+                        PlayerPrefs.SetString("lastCaveEntered", "mathLevel");
+                    }
+                    if(interactable.tag == "leverLevel")
+                    {
+                        PlayerPrefs.SetString("lastCaveEntered", "leverLevel");
+                    }
+                    if(interactable.tag == "boulderLevel")
+                    {
+                        PlayerPrefs.SetString("lastCaveEntered", "boulderLevel");
+                    }
             }
             else
             {
