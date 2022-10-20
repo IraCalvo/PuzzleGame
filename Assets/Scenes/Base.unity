@@ -2049,6 +2049,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &565903918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565903919}
+  m_Layer: 0
+  m_Name: DefaultPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &565903919
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565903918}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &612629476
 GameObject:
   m_ObjectHideFlags: 0
@@ -3929,6 +3960,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3204268374706718708, guid: 5196c6aa105ebe9408eae0750a4f5578, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5901370802044155959, guid: 5196c6aa105ebe9408eae0750a4f5578, type: 3}
       propertyPath: m_Name
       value: MathDialogBox
@@ -4039,6 +4074,10 @@ PrefabInstance:
       propertyPath: boulderExit
       value: 
       objectReference: {fileID: 539650524}
+    - target: {fileID: 8546818792498040181, guid: 13f66b004d9ac2943beaaf415972cecd, type: 3}
+      propertyPath: defaultPosition
+      value: 
+      objectReference: {fileID: 565903918}
     - target: {fileID: 8546818793982944169, guid: 13f66b004d9ac2943beaaf415972cecd, type: 3}
       propertyPath: m_RootOrder
       value: 1

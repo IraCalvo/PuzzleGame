@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+
 
 
 public class PlayerController : MonoBehaviour
@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     public GameObject mathExit;
     public GameObject leverExit;
     public GameObject boulderExit;
+    public GameObject defaultPosition;
 
     void Awake()
     {
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
             PlayerController.isNewGame = false;
             Debug.Log("PlayerController Start: reset keyCount.");
             PlayerPrefs.SetInt("keyCount", 0);
+            PlayerPrefs.SetString("lastCaveEntered", "newGame");
         }
 
         PlayerPrefs.GetInt("keyCount");
@@ -60,6 +62,10 @@ public class PlayerController : MonoBehaviour
         if(PlayerPrefs.GetString("lastCaveEntered") == "boulderLevel")
         {
             this.transform.position = boulderExit.transform.position;
+        }
+        if(PlayerPrefs.GetString("lastCaveEntered") == "newGame")
+        {
+            this.transform.position = defaultPosition.transform.position;
         }
     }
 
