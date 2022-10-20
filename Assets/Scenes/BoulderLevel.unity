@@ -489,6 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactDescription: Press Q To Reset Boulders
+  tag: 
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -6248,6 +6249,10 @@ MonoBehaviour:
   interactKey: 113
   canMove: 1
   isMoving: 0
+  mathExit: {fileID: 0}
+  leverExit: {fileID: 0}
+  boulderExit: {fileID: 0}
+  defaultPosition: {fileID: 0}
 --- !u!1001 &1494639580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6745,6 +6750,10 @@ PrefabInstance:
       propertyPath: scene
       value: 
       objectReference: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
+    - target: {fileID: 7782824874673780453, guid: d607ada2b45db3e419793db8bad58c9a, type: 3}
+      propertyPath: levelName
+      value: Base
+      objectReference: {fileID: 0}
     - target: {fileID: 7782824874673780454, guid: d607ada2b45db3e419793db8bad58c9a, type: 3}
       propertyPath: m_RootOrder
       value: 41

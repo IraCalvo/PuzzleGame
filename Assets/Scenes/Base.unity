@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4be2c5667860340896e7df4a818c92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: {fileID: 102900000, guid: 2d22511ca211a6644b36d7b23e87e166, type: 3}
+  levelName: MathLevel
 --- !u!4 &168288210
 Transform:
   m_ObjectHideFlags: 0
@@ -2137,7 +2137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4be2c5667860340896e7df4a818c92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: {fileID: 102900000, guid: 4542b916a7c893047b606a6c31a20611, type: 3}
+  levelName: BoulderLevel
 --- !u!4 &612629479
 Transform:
   m_ObjectHideFlags: 0
@@ -4004,6 +4004,10 @@ PrefabInstance:
     - target: {fileID: 7782824874673780451, guid: d607ada2b45db3e419793db8bad58c9a, type: 3}
       propertyPath: m_Name
       value: CaveEntrance
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782824874673780453, guid: d607ada2b45db3e419793db8bad58c9a, type: 3}
+      propertyPath: levelName
+      value: LeverLevel
       objectReference: {fileID: 0}
     - target: {fileID: 7782824874673780454, guid: d607ada2b45db3e419793db8bad58c9a, type: 3}
       propertyPath: m_RootOrder

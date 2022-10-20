@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class CaveEntrance : MonoBehaviour
 {
-    public Object scene;
+    [SerializeField] string levelName;
 
     public void OnCaveEntry()
     {
-        SceneManager.LoadScene(scene.name);
+        SceneManager.LoadScene(levelName);
     }
 
 
