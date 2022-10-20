@@ -8,9 +8,9 @@ Within this project I gained a MASSIVE apprection for puzzle makers, I learned t
 I learned the necessary skills to actually make the code for the puzzle as well as actually making the puzzle.
 
 what this project features:
-Player animation
-Classic puzzles inspired by The Legend of Zelda
-Saving variables across scenes
-Collision detection
-Interaction system
+Player animation,
+Classic puzzles inspired by The Legend of Zelda,
+Saving variables across scenes,
+Collision detection,
+Interaction system,
 Tilemaping
